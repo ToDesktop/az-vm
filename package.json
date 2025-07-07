@@ -1,0 +1,40 @@
+{
+  "name": "@todesktop/az-vm",
+  "version": "1.0.0",
+  "description": "Quick and easy Azure VM creation CLI tool supporting Windows and Linux VMs",
+  "main": "create-az-vm.js",
+  "bin": {
+    "az-vm": "./create-az-vm.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "azure",
+    "vm",
+    "virtual-machine",
+    "cli",
+    "cloud",
+    "windows",
+    "linux",
+    "ubuntu",
+    "devops"
+  ],
+  "author": "ToDesktop",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/todesktop/az-vm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/todesktop/az-vm/issues"
+  },
+  "homepage": "https://github.com/todesktop/az-vm#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "preferGlobal": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}
