@@ -2,6 +2,8 @@
 
 Quick and easy Azure VM creation CLI tool supporting Windows and Linux VMs.
 
+At [ToDesktop](https://todesktop.com) we use Azure VMs to quickly test x86-based Windows apps. It's useful for us because Apple Silicon Macs, are slow to emulate x86 VMs, so we spin up VMs in Azure instead for testing.
+
 ## Features
 
 - 🚀 **Quick VM Creation** - Create VMs with a single command
@@ -151,6 +153,7 @@ Unlike Windows VMs, Linux VMs require additional setup for remote desktop access
 **For Ubuntu/Debian:**
 
 1. **Install desktop environment and VNC server:**
+
 ```bash
 # Update packages
 sudo apt update
@@ -160,6 +163,7 @@ sudo apt install xfce4 xfce4-goodies tightvncserver -y
 ```
 
 2. **Configure VNC:**
+
 ```bash
 # Start VNC server to create config files
 vncserver
@@ -174,6 +178,7 @@ nano ~/.vnc/xstartup
 ```
 
 3. **Add this content to ~/.vnc/xstartup:**
+
 ```bash
 #!/bin/bash
 xrdb $HOME/.Xresources
@@ -181,22 +186,26 @@ startxfce4 &
 ```
 
 4. **Make it executable and start VNC:**
+
 ```bash
 chmod +x ~/.vnc/xstartup
 vncserver -geometry 1920x1080 -depth 24
 ```
 
 5. **Open VNC port in Azure (5901):**
+
 ```bash
 az vm open-port --resource-group <resource-group> --name <vm-name> --port 5901
 ```
 
 6. **Connect from your local machine:**
+
 - Download a VNC client (RealVNC, TightVNC, or TigerVNC)
 - Connect to: `<vm-ip>:5901`
 - Use the VNC password you created
 
 **For better performance, use X2Go instead:**
+
 ```bash
 # Install X2Go server
 sudo apt-add-repository ppa:x2go/stable
