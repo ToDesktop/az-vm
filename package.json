@@ -1,6 +1,6 @@
 {
   "name": "@todesktop/az-vm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Quick and easy Azure VM creation CLI tool supporting Windows and Linux VMs",
   "main": "create-az-vm.js",
   "bin": {
