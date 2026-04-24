@@ -5,7 +5,7 @@ const crypto = require("crypto");
 
 // Image presets for common OS types
 const IMAGE_PRESETS = {
-  'windows-11': 'MicrosoftWindowsDesktop:Windows-11:win11-23h2-pro:latest',
+  'windows-11': 'MicrosoftWindowsDesktop:Windows-11:win11-24h2-pro:latest',
   'windows-10': 'MicrosoftWindowsDesktop:Windows-10:win10-22h2-pro:latest',
   'windows-server-2022': 'MicrosoftWindowsServer:WindowsServer:2022-datacenter:latest',
   'windows-server-2019': 'MicrosoftWindowsServer:WindowsServer:2019-datacenter:latest',
